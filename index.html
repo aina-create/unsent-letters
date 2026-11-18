@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f8f3eb">
+  <meta name="description" content="Write the words you never sent. Keep a private draft on your device, or delete it whenever you like.">
+  <title>Letters Never Sent — Say it here. Keep it yours.</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Letters Never Sent home"><span class="brand-icon">✉</span> Letters Never Sent</a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="nav-links" aria-label="Main navigation"><a href="#about">About</a><a href="#privacy">Privacy</a><a href="#write">Write a letter</a></nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="eyebrow">FOR EVERYTHING YOU DIDN’T GET TO SAY</div>
+      <h1>Letters Never Sent</h1>
+      <p class="hero-script">Say it here. Keep it yours.</p>
+      <p class="hero-copy">To the person, the past, the almost, or the you-you-used-to-be. Put the words down. There’s no send button, no audience, and no perfect way to begin.</p>
+      <div class="hero-actions"><a class="button button-primary" href="#write">Write the unsent letter <span>↗</span></a><a class="button button-quiet" href="#about">See how it works</a></div>
+      <div class="hero-note"><span>✳</span> Your words stay yours. We never publish or collect letter contents.</div>
+    </section>
+
+    <section class="feature-grid" aria-label="Ways to use this space">
+      <article class="feature-card"><span class="feature-icon pink">✉</span><h2>Start anywhere</h2><p>One sentence, a whole page, or just “I miss you.” The blank page is yours.</p></article>
+      <article class="feature-card"><span class="feature-icon tan">♡</span><h2>Keep it close</h2><p>Your draft stays in this browser. Come back when you’re ready, or delete it in a tap.</p></article>
+      <article class="feature-card"><span class="feature-icon pink">✧</span><h2>No send button</h2><p>No account. No public posts. Just a private place to find the words for yourself.</p></article>
+    </section>
+
+    <section class="write-section" id="write">
+      <div class="section-heading"><span class="eyebrow">YOUR PAGE, YOURS ALONE</span><h2>No perfect words. Just yours.</h2><p>Write to someone, something, or a moment in time. Your draft saves in this browser, and you can delete it whenever you like.</p></div>
+      <div class="writing-card">
+        <div class="letter-meta"><label for="letter-to">Dear <input id="letter-to" type="text" placeholder="whoever needs to hear it" maxlength="80" autocomplete="off"></label><span class="save-state" id="save-state" aria-live="polite">Only on this device</span></div>
+        <textarea id="letter-body" placeholder="If I could tell you one thing…" aria-label="Your private letter"></textarea>
+        <div class="letter-bottom"><span class="local-badge"><span></span> Private draft · saved in this browser</span><div class="letter-actions"><button class="save-button" id="save-draft" type="button">Save on this device</button><button class="text-button" id="delete-draft" type="button">Delete draft</button></div></div>
+        <div class="privacy-inline">Your letter is stored in this browser’s local storage. It is not sent to us or published. Clearing browser data or using another device may remove or hide it.</div>
+      </div>
+    </section>
+
+    <section class="privacy-section" id="privacy">
+      <div class="privacy-mark">⌂</div><div><span class="eyebrow">A NOTE ON PRIVACY</span><h2>Your words stay on your device</h2><p>This page saves your draft in local storage in the browser you’re using, so it can still be here when you return on the same device and browser. The letter text is not sent to a server, collected by us, or shown publicly. Anyone with access to this browser profile or device may be able to see it. You can remove it with <strong>Delete draft</strong> or clear this site’s browser data.</p></div>
+    </section>
+
+    <section class="about-section" id="about">
+      <div class="section-heading"><span class="eyebrow">A SMALL, QUIET CORNER</span><h2>About this space</h2><div class="heading-rule"></div></div>
+      <div class="about-grid"><article><h3>Our intention</h3><p>To offer a calm, private page for the thoughts and feelings you want to put into words. You decide what happens next.</p></article><article><h3>Why unsent letters?</h3><p>Writing can help you give shape to what’s on your mind. You don’t have to address, send, or share a letter for it to be yours.</p></article><article><h3>A gentle reminder</h3><p>This is a writing tool, not therapy or mental-health treatment. If you need support, consider reaching out to someone you trust or a qualified professional.</p></article></div>
+    </section>
+
+    <section class="closing"><p>“You can begin with just one honest sentence.”</p><a class="button button-outline" href="#write">Begin your letter <span>↗</span></a></section>
+  </main>
+  <footer><a class="brand" href="#home"><span class="brand-icon">✉</span> Letters Never Sent</a><p>A quiet place for words that are yours.</p><div class="footer-links"><a href="#about">About</a><a href="#privacy">Privacy</a><a href="#write">Write a letter</a></div><small>Your draft stays in your browser. Nothing is published or collected.</small></footer>
+  <dialog id="delete-dialog" class="confirm-dialog"><form method="dialog"><span class="dialog-icon">⌫</span><h2>Delete this draft?</h2><p>This permanently removes the letter saved in this browser.</p><div class="dialog-actions"><button class="button button-quiet" value="cancel">Keep writing</button><button class="button button-danger" id="confirm-delete" value="delete">Delete draft</button></div></form></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
